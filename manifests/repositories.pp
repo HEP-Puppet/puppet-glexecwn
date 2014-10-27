@@ -47,13 +47,4 @@ class glexecwn::repositories (
     enabled  => 1,
     priority => 40,
   }
-
-  #
-  # upgrade path conflicts
-  #
-
-  # conflict with voms-client3
-  # package {voms-clients:
-  #  ensure => absent,
-  #}
 }
