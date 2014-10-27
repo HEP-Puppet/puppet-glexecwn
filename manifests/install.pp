@@ -7,7 +7,10 @@ class glexecwn::install (
   $glexec_permissions = $glexecwn::params::glexec_permissions,
   $emi_version        = $glexecwn::params::emi_version,) {
   if $install_dummydpm == true {
-    package { dummydpm: ensure => present, }
+    package { dummydpm:
+      ensure          => present,
+      install_options => ['--enablerepo=epel'],
+    }
   }
 
   # install worker node software
